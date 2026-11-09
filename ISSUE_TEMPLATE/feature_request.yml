@@ -1,0 +1,41 @@
+name: 機能追加・改善の要望
+description: 新しい機能や、いまの機能の改善を提案する
+title: "[要望] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        要望ありがとうございます。
+        **個人情報（氏名・メールアドレス・会員番号など）は書かないでください。**
+  - type: textarea
+    id: problem
+    attributes:
+      label: 困っていること・目的
+      description: 誰が、どんな場面で、何に困っているか
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案する内容
+      description: こうなってほしい、という動きや画面
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: ほかに考えた方法
+      description: いまの回避策や、検討した別案があれば
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 急ぎ度
+      options:
+        - 急ぎ（運用に支障がある）
+        - 普通
+        - いつでもよい
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足

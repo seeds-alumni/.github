@@ -1,0 +1,59 @@
+name: バグ報告
+description: 動作がおかしい、エラーが出るなどの不具合を報告する
+title: "[バグ] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        不具合の報告ありがとうございます。
+        **氏名・メールアドレス・会員番号などの個人情報は書かないでください**（スクリーンショットも個人情報が写っていないか確認してください）。
+  - type: dropdown
+    id: environment
+    attributes:
+      label: 環境
+      options:
+        - 本番
+        - 開発環境
+        - ローカル
+        - 分からない
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: 何が起きたか
+      description: 表示されたエラーメッセージがあれば、そのまま貼ってください
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      placeholder: |
+        1. ○○の画面を開く
+        2. ○○を押す
+        3. エラーが表示される
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 本来どうなるべきか
+    validations:
+      required: true
+  - type: input
+    id: occurred_at
+    attributes:
+      label: 起きた日時
+      description: ログを探すのに使います（例：2026-11-09 14:30 ごろ）
+  - type: input
+    id: browser
+    attributes:
+      label: 端末・ブラウザ
+      placeholder: 例：iPhone / Safari、Windows / Chrome
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足
+      description: スクリーンショット、頻度（毎回・たまに）など
